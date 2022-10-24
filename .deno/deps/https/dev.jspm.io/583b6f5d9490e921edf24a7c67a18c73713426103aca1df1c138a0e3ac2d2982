@@ -1,0 +1,21 @@
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports.__esModule = true;
+
+  exports['default'] = function (instance) {
+    instance.registerHelper('lookup', function (obj, field, options) {
+      if (!obj) {
+        // Note for 5.0: Change to "obj == null" in 5.0
+        return obj;
+      }
+
+      return options.lookupProperty(obj, field);
+    });
+  };
+
+  exports = exports['default'];
+  return exports;
+}

@@ -1,0 +1,25 @@
+import { dew as _inlineDewDew } from "./decorators/inline.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports.__esModule = true;
+  exports.registerDefaultDecorators = registerDefaultDecorators; // istanbul ignore next
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      'default': obj
+    };
+  }
+
+  var _decoratorsInline = _inlineDewDew();
+
+  var _decoratorsInline2 = _interopRequireDefault(_decoratorsInline);
+
+  function registerDefaultDecorators(instance) {
+    _decoratorsInline2['default'](instance);
+  }
+
+  return exports;
+}

@@ -1,0 +1,78 @@
+import { dew as _handlebarsRuntimeDewDew } from "./handlebars.runtime.dew.js";
+import { dew as _astDewDew } from "./handlebars/compiler/ast.dew.js";
+import { dew as _baseDewDew } from "./handlebars/compiler/base.dew.js";
+import { dew as _compilerDewDew } from "./handlebars/compiler/compiler.dew.js";
+import { dew as _javascriptCompilerDewDew } from "./handlebars/compiler/javascript-compiler.dew.js";
+import { dew as _visitorDewDew } from "./handlebars/compiler/visitor.dew.js";
+import { dew as _noConflictDewDew } from "./handlebars/no-conflict.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports.__esModule = true; // istanbul ignore next
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      'default': obj
+    };
+  }
+
+  var _handlebarsRuntime = _handlebarsRuntimeDewDew();
+
+  var _handlebarsRuntime2 = _interopRequireDefault(_handlebarsRuntime); // Compiler imports
+
+
+  var _handlebarsCompilerAst = _astDewDew();
+
+  var _handlebarsCompilerAst2 = _interopRequireDefault(_handlebarsCompilerAst);
+
+  var _handlebarsCompilerBase = _baseDewDew();
+
+  var _handlebarsCompilerCompiler = _compilerDewDew();
+
+  var _handlebarsCompilerJavascriptCompiler = _javascriptCompilerDewDew();
+
+  var _handlebarsCompilerJavascriptCompiler2 = _interopRequireDefault(_handlebarsCompilerJavascriptCompiler);
+
+  var _handlebarsCompilerVisitor = _visitorDewDew();
+
+  var _handlebarsCompilerVisitor2 = _interopRequireDefault(_handlebarsCompilerVisitor);
+
+  var _handlebarsNoConflict = _noConflictDewDew();
+
+  var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
+
+  var _create = _handlebarsRuntime2['default'].create;
+
+  function create() {
+    var hb = _create();
+
+    hb.compile = function (input, options) {
+      return _handlebarsCompilerCompiler.compile(input, options, hb);
+    };
+
+    hb.precompile = function (input, options) {
+      return _handlebarsCompilerCompiler.precompile(input, options, hb);
+    };
+
+    hb.AST = _handlebarsCompilerAst2['default'];
+    hb.Compiler = _handlebarsCompilerCompiler.Compiler;
+    hb.JavaScriptCompiler = _handlebarsCompilerJavascriptCompiler2['default'];
+    hb.Parser = _handlebarsCompilerBase.parser;
+    hb.parse = _handlebarsCompilerBase.parse;
+    hb.parseWithoutProcessing = _handlebarsCompilerBase.parseWithoutProcessing;
+    return hb;
+  }
+
+  var inst = create();
+  inst.create = create;
+
+  _handlebarsNoConflict2['default'](inst);
+
+  inst.Visitor = _handlebarsCompilerVisitor2['default'];
+  inst['default'] = inst;
+  exports['default'] = inst;
+  exports = exports['default'];
+  return exports;
+}

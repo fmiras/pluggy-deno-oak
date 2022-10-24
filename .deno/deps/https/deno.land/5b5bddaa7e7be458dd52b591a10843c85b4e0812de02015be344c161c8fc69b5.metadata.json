@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400",
+    "x-deno-warning": "Implicitly using latest version (v6.5.0) for https://deno.land/x/oak/mod.ts",
+    "cf-ray": "635be5324d19d6dd-FRA",
+    "content-length": "0",
+    "cf-request-id": "090d4d936e0000d6dda635c000000001",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "vary": "Accept-Encoding",
+    "server": "cloudflare",
+    "set-cookie": "__cfduid=db57e8f2d5fc6283e2677a9b9f09413511616714693; expires=Sat, 24-Apr-21 23:24:53 GMT; path=/; domain=.deno.land; HttpOnly; SameSite=Lax; Secure",
+    "date": "Thu, 25 Mar 2021 23:24:53 GMT",
+    "location": "/x/oak@v6.5.0/mod.ts"
+  },
+  "url": "https://deno.land/x/oak/mod.ts"
+}

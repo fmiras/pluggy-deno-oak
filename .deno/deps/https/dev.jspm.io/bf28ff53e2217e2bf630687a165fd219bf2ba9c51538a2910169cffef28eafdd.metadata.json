@@ -1,0 +1,20 @@
+{
+  "headers": {
+    "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400",
+    "content-type": "application/javascript",
+    "cf-request-id": "091c248a6c000030dfffb84000000001",
+    "report-to": "{\"group\":\"cf-nel\",\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?s=1t9iQrbwZMLETRFu0Xw3wPg2XEU1geZcHOS45BUJARtFvJ70ldkK1VB65LJZFAzHClMAU8f4uxbPlf1ekQjH5Ge4S9VcpX%2Bpb4NXyw%3D%3D\"}],\"max_age\":604800}",
+    "access-control-allow-origin": "*",
+    "date": "Sun, 28 Mar 2021 20:34:22 GMT",
+    "server": "cloudflare",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "cf-cache-status": "HIT",
+    "cf-ray": "6373a38a4d4630df-ORD",
+    "set-cookie": "__cfduid=d89caafebcd2c7b63bb3e53bab7940e901616963662; expires=Tue, 27-Apr-21 20:34:22 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax; Secure",
+    "vary": "Accept-Encoding",
+    "age": "1931452",
+    "nel": "{\"max_age\":604800,\"report_to\":\"cf-nel\"}",
+    "cache-control": "max-age=31536000, public, immutable"
+  },
+  "url": "https://dev.jspm.io/npm:@jspm/core@1.1.1/nodelibs/fs.js"
+}

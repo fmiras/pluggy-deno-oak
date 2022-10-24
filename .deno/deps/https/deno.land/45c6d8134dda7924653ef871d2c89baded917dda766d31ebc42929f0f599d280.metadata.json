@@ -1,0 +1,25 @@
+{
+  "headers": {
+    "vary": "Accept-Encoding",
+    "access-control-allow-origin": "*",
+    "set-cookie": "__cfduid=d3c3dcb57e7c954fa26f8fb45aca0c9311616963662; expires=Tue, 27-Apr-21 20:34:22 GMT; path=/; domain=.deno.land; HttpOnly; SameSite=Lax; Secure",
+    "etag": "\"1193ee551b813c26a951b98838c14f7f\"",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "last-modified": "Sun, 13 Sep 2020 14:36:36 GMT",
+    "date": "Sun, 28 Mar 2021 20:34:22 GMT",
+    "server": "cloudflare",
+    "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400",
+    "cf-ray": "6373a3879a46c63f-MSP",
+    "x-amz-version-id": "i2orBH_YZ4ufsg9dTrSmKoYC6MA560NL",
+    "x-amz-id-2": "oEwuUztHy5JHIsdZHGPmNQ6Y6u0zgWY0c8tuxI9wIkcXneUFdmqEHB1WksXvTijVfVUXiI782oc=",
+    "content-type": "application/typescript; charset=utf-8",
+    "cf-request-id": "091c2488c20000c63f1dbc9000000001",
+    "accept-ranges": "bytes",
+    "cache-control": "public, max-age=31536000, immutable",
+    "cf-cache-status": "HIT",
+    "content-length": "21660",
+    "age": "375995",
+    "x-amz-request-id": "6N0XTE8GEG3VG9P0"
+  },
+  "url": "https://deno.land/std@0.69.0/io/bufio.ts"
+}

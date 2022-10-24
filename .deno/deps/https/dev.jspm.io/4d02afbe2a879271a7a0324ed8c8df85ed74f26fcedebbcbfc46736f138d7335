@@ -1,0 +1,28 @@
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports.__esModule = true;
+  exports.wrapHelper = wrapHelper;
+
+  function wrapHelper(helper, transformOptionsFn) {
+    if (typeof helper !== 'function') {
+      // This should not happen, but apparently it does in https://github.com/wycats/handlebars.js/issues/1639
+      // We try to make the wrapper least-invasive by not wrapping it, if the helper is not a function.
+      return helper;
+    }
+
+    var wrapper = function wrapper()
+    /* dynamic arguments */
+    {
+      var options = arguments[arguments.length - 1];
+      arguments[arguments.length - 1] = transformOptionsFn(options);
+      return helper.apply(this, arguments);
+    };
+
+    return wrapper;
+  }
+
+  return exports;
+}

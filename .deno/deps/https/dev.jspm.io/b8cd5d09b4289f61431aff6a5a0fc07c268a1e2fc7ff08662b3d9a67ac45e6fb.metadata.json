@@ -1,0 +1,20 @@
+{
+  "headers": {
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "cf-request-id": "091c2487d2000030df0fa10000000001",
+    "date": "Sun, 28 Mar 2021 20:34:21 GMT",
+    "server": "cloudflare",
+    "content-type": "application/javascript",
+    "cache-control": "max-age=31536000, public, immutable",
+    "age": "1931449",
+    "vary": "Accept-Encoding",
+    "access-control-allow-origin": "*",
+    "cf-cache-status": "HIT",
+    "report-to": "{\"group\":\"cf-nel\",\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?s=mbljQ1%2FoANujACWutnYzfqoMhXPhoU2%2BFG0hwUfMKl6dwJZiK9S%2FZ07fcKu2%2F%2BsginsyevtwJtPbIspqA6K8jjIXGGLjVolyz7pZhA%3D%3D\"}],\"max_age\":604800}",
+    "nel": "{\"max_age\":604800,\"report_to\":\"cf-nel\"}",
+    "cf-ray": "6373a3861b1c30df-ORD",
+    "set-cookie": "__cfduid=d955d56bea2598e80852cbbecc982e5081616963661; expires=Tue, 27-Apr-21 20:34:21 GMT; path=/; domain=.jspm.io; HttpOnly; SameSite=Lax; Secure",
+    "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+  },
+  "url": "https://dev.jspm.io/npm:source-map@0.6.1/lib/source-map-consumer.dew.js"
+}

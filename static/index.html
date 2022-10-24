@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Deno Starter App</title>
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="min-h-screen bg-gray-300 flex flex-col">
+  <div class=" mx-auto my-auto p-5 bg-white space-y-2 max-w-xl ">
+    <div class="place-items-center">
+      <img class="w-48" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Deno.svg/1200px-Deno.svg.png"></img>
+    </div>
+    <div class="">
+      <h1 class="text-2xl font-bold">Deno Oak Template!</h1>
+      <h4>By <a href="https://replit.com/@RoBlockHead">@RoBlockHead</a></h4>
+      
+    </div>
+    <div class="">
+      This Template is a basic template that shows what you can do with Deno and the Oak web Framework!
+    </div>
+    <ul class="list-disc list-inside">
+      <li>This file is served using the static file server within <code>mod.ts</code><br></li>
+      <li>All non-static paths are served through <code>routes.ts</code><br></li>
+      <li>You can see an example of routing by going to <a href="/hello"><code>/hello</code></a>.<br></li>
+      <li>There's also an example of redirecting at <a href="/redirect"><code>/redirect</code></a><br></li>
+			<li>You can use parameters and queries at <a href="/demo"><code>/demo</code></a>.<br></li>
+			<li>Login Demo at <a href="/login"><code>/login</code></a>.<br></li>
+    </ul>
+    <div class="py-2">
+      <a href="/demo" class="text-blue-700 text-lg font-bold">Go to The Demo Page! &RightArrow; </a><br>
+			<a href="/login" class="text-blue-700 text-lg font-bold">Go to The Login Page! &RightArrow; </a>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

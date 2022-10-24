@@ -1,0 +1,78 @@
+import { dew as _blockHelperMissingDewDew } from "./helpers/block-helper-missing.dew.js";
+import { dew as _eachDewDew } from "./helpers/each.dew.js";
+import { dew as _helperMissingDewDew } from "./helpers/helper-missing.dew.js";
+import { dew as _ifDewDew } from "./helpers/if.dew.js";
+import { dew as _logDewDew } from "./helpers/log.dew.js";
+import { dew as _lookupDewDew } from "./helpers/lookup.dew.js";
+import { dew as _withDewDew } from "./helpers/with.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports.__esModule = true;
+  exports.registerDefaultHelpers = registerDefaultHelpers;
+  exports.moveHelperToHooks = moveHelperToHooks; // istanbul ignore next
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      'default': obj
+    };
+  }
+
+  var _helpersBlockHelperMissing = _blockHelperMissingDewDew();
+
+  var _helpersBlockHelperMissing2 = _interopRequireDefault(_helpersBlockHelperMissing);
+
+  var _helpersEach = _eachDewDew();
+
+  var _helpersEach2 = _interopRequireDefault(_helpersEach);
+
+  var _helpersHelperMissing = _helperMissingDewDew();
+
+  var _helpersHelperMissing2 = _interopRequireDefault(_helpersHelperMissing);
+
+  var _helpersIf = _ifDewDew();
+
+  var _helpersIf2 = _interopRequireDefault(_helpersIf);
+
+  var _helpersLog = _logDewDew();
+
+  var _helpersLog2 = _interopRequireDefault(_helpersLog);
+
+  var _helpersLookup = _lookupDewDew();
+
+  var _helpersLookup2 = _interopRequireDefault(_helpersLookup);
+
+  var _helpersWith = _withDewDew();
+
+  var _helpersWith2 = _interopRequireDefault(_helpersWith);
+
+  function registerDefaultHelpers(instance) {
+    _helpersBlockHelperMissing2['default'](instance);
+
+    _helpersEach2['default'](instance);
+
+    _helpersHelperMissing2['default'](instance);
+
+    _helpersIf2['default'](instance);
+
+    _helpersLog2['default'](instance);
+
+    _helpersLookup2['default'](instance);
+
+    _helpersWith2['default'](instance);
+  }
+
+  function moveHelperToHooks(instance, helperName, keepHelper) {
+    if (instance.helpers[helperName]) {
+      instance.hooks[helperName] = instance.helpers[helperName];
+
+      if (!keepHelper) {
+        delete instance.helpers[helperName];
+      }
+    }
+  }
+
+  return exports;
+}

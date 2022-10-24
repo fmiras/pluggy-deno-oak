@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Deno Starter App</title>
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="min-h-screen bg-gray-300 flex flex-col justify-center ">
+		<div class=" mx-auto p-5 bg-white space-y-2 max-w-xl ">
+			<div class="">
+				<h1 class="text-2xl font-bold">Demo Page!</h1>
+			</div>
+			<div class="">
+				<%= demoText  %>
+			</div>
+			<div class="">
+        Request Parameters: <span class="font-semibold"><%= reqParams %></span><br>
+        Request Queries: <span class="font-semibold"><%= reqQueries %></span>
+      </div>
+			<div class="py-2">
+				<a href="/login" class="text-blue-700 text-lg font-bold">Go to The Login Page! &RightArrow; </a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

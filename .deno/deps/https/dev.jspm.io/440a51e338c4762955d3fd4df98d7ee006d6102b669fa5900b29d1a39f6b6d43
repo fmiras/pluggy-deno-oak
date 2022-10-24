@@ -1,0 +1,81 @@
+import { dew as _parserDewDew } from "./parser.dew.js";
+import { dew as _whitespaceControlDewDew } from "./whitespace-control.dew.js";
+import { dew as _helpersDewDew } from "./helpers.dew.js";
+import { dew as _utilsDewDew } from "../utils.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports.__esModule = true;
+  exports.parseWithoutProcessing = parseWithoutProcessing;
+  exports.parse = parse; // istanbul ignore next
+
+  function _interopRequireWildcard(obj) {
+    if (obj && obj.__esModule) {
+      return obj;
+    } else {
+      var newObj = {};
+
+      if (obj != null) {
+        for (var key in obj) {
+          if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
+        }
+      }
+
+      newObj['default'] = obj;
+      return newObj;
+    }
+  } // istanbul ignore next
+
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      'default': obj
+    };
+  }
+
+  var _parser = _parserDewDew();
+
+  var _parser2 = _interopRequireDefault(_parser);
+
+  var _whitespaceControl = _whitespaceControlDewDew();
+
+  var _whitespaceControl2 = _interopRequireDefault(_whitespaceControl);
+
+  var _helpers = _helpersDewDew();
+
+  var Helpers = _interopRequireWildcard(_helpers);
+
+  var _utils = _utilsDewDew();
+
+  exports.parser = _parser2['default'];
+  var yy = {};
+
+  _utils.extend(yy, Helpers);
+
+  function parseWithoutProcessing(input, options) {
+    // Just return if an already-compiled AST was passed in.
+    if (input.type === 'Program') {
+      return input;
+    }
+
+    _parser2['default'].yy = yy; // Altering the shared object here, but this is ok as parser is a sync operation
+
+    yy.locInfo = function (locInfo) {
+      return new yy.SourceLocation(options && options.srcName, locInfo);
+    };
+
+    var ast = _parser2['default'].parse(input);
+
+    return ast;
+  }
+
+  function parse(input, options) {
+    var ast = parseWithoutProcessing(input, options);
+    var strip = new _whitespaceControl2['default'](options);
+    return strip.accept(ast);
+  }
+
+  return exports;
+}

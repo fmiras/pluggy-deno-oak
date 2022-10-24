@@ -1,0 +1,35 @@
+import { dew as _exceptionDewDew } from "../exception.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+  exports.__esModule = true; // istanbul ignore next
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      'default': obj
+    };
+  }
+
+  var _exception = _exceptionDewDew();
+
+  var _exception2 = _interopRequireDefault(_exception);
+
+  exports['default'] = function (instance) {
+    instance.registerHelper('helperMissing', function ()
+    /* [args, ]options */
+    {
+      if (arguments.length === 1) {
+        // A missing field in a {{foo}} construct.
+        return undefined;
+      } else {
+        // Someone is actually trying to call something, blow up.
+        throw new _exception2['default']('Missing helper: "' + arguments[arguments.length - 1].name + '"');
+      }
+    });
+  };
+
+  exports = exports['default'];
+  return exports;
+}
