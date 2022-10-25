@@ -13,7 +13,6 @@ import {
   adapterFactory,
 } from "https://deno.land/x/view_engine@v1.4.5/mod.ts";
 
-
 export const app = new Application();
 const PORT = 8000;
 

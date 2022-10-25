@@ -3,7 +3,6 @@ import {app} from "./mod.ts";
 
 const router = new Router();
 
-
 router
 	.post('/connect', (context) => {
     const connectData = JSON.parse(context.request.body)
